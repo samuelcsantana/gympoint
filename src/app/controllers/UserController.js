@@ -8,6 +8,7 @@ class UserController {
             email: Yup.string()
                 .email()
                 .required(),
+            admin: Yup.bool().oneOf([Yup.ref('admin'), true]),
             password: Yup.string()
                 .required()
                 .min(6),

@@ -11,6 +11,7 @@ class SessionController {
             email: Yup.string()
                 .email()
                 .required(),
+            fa: Yup.bool().required() === true,
             password: Yup.string().required(),
         });
 
